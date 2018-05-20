@@ -13,7 +13,7 @@ int main()
             for(int j = 1; j<N; j++)
         {
             if((i != j)&&((a[i]+a[j])>Max)){
-                Max = Sum;
+                Max = (a[i]+a[j]);
             }
         }
 
