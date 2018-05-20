@@ -9,23 +9,25 @@ int main()
     Max = 0;
     for(int i = 0; i<N; i++)
     {
-  //      cout << a[i] << endl;
+        cout << a[i] << endl;
             for(int j = 1; j<N; j++)
         {
             if(i != j){
             Sum = a[i]+a[j];
             if (Sum > Max)
                 Max = Sum;
-                cout << Max << endl;
             }
         }
 
     }
     if (Max%2==0)
-        cout << "Контроль не пройден";
+        cout << "NO";
         else
+        {
+
         cout << Max << endl;
- //       cout << "Контроль пройден";
+        cout << "YES";
+        }
 
     return 0;
 }
