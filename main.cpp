@@ -1,30 +1,19 @@
 #include <iostream>
-#define N 10
+#define N 15
 using namespace std;
 
 int main()
 {
-    int a[N] = {10, 20, 45, 26, 55, 7, 54, 100, 79, 1};
-    int Max, Sum;
-    Max = 0;
+    float a[N] = {10, 5, 9, 7, 5, 3, 6, 3, 4, 5, 7, 10, 1, 6, 5};
+    float Min = 1000;
     for(int i = 0; i<N; i++)
     {
-        cout << a[i] << endl;
             for(int j = 1; j<N; j++)
         {
-            if((i != j)&&((a[i]+a[j])>Max)){
-                Max = (a[i]+a[j]);
-            }
+            if((j-i>=6)&&((a[i]*a[j])<Min))
+                Min = (a[i]*a[j]);
         }
-
     }
-    if (Max%2==0)
-        cout << "NO";
-        else
-        {
-        cout << Max << endl;
-        cout << "YES";
-        }
-
+    cout << Min << endl;
     return 0;
 }
