@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int a[N] = {10, 20, 45, 26, 55, 7, 54, 100, 78, 1};
+    int a[N] = {10, 20, 45, 26, 55, 7, 54, 100, 79, 1};
     int Max, Sum;
     Max = 0;
     for(int i = 0; i<N; i++)
@@ -12,9 +12,7 @@ int main()
         cout << a[i] << endl;
             for(int j = 1; j<N; j++)
         {
-            if(i != j){
-            Sum = a[i]+a[j];
-            if (Sum > Max)
+            if((i != j)&&((a[i]+a[j])>Max)){
                 Max = Sum;
             }
         }
@@ -24,7 +22,6 @@ int main()
         cout << "NO";
         else
         {
-
         cout << Max << endl;
         cout << "YES";
         }
